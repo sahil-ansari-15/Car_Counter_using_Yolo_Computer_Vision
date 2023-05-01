@@ -31,9 +31,11 @@ while True:
     # img = cv2.flip(img, 1)      ## Flip the image horizontally
     imgRegion = cv2.bitwise_and(img, mask)
 
-    results = model(img, stream=True)
-                                ## show: add bounding boxes to the img
-                                ## stream: DOESN'T add bounding boxes to the img
+    # results = model(img, stream=True)       ## show: add bounding boxes to the img
+                                              ## stream: DOESN'T add bounding boxes to the img
+
+    results = model(imgRegion, stream=True)   ## using "imgRegion" instead of "img" to get best results & save computation
+
     for r in results:
         for box in r.boxes:
 
@@ -62,3 +64,11 @@ while True:
     cv2.imshow("Images-video", img)
     cv2.imshow("Images-video-imgRegion", imgRegion)
     cv2.waitKey(0)          # 1 mili sec delay
+
+"""
+Key Notes:
+(1) A car (or object) will be counted only when it crosses the predefined line.
+(2) We have to track the object. i.e., should know where the car has gone from frame 1 to frame 2.
+    For this, we need a tracking ID. If a car is ID1 in frame 1, then it should remain ID1 in frame 2 as well (not any other ID).
+    To achieve this, we need a tracker called "sort.py" (available on GitHub: https://github.com/abewley/sort).
+"""
