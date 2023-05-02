@@ -1,14 +1,10 @@
 # Car_Counter_using_Yolo_Computer_Vision
  
-Steps:
-
-(1) Capture video (series of input images) from live camera or pre-saved video.
-
-(2) Load Yolo model
-
+Steps:<br><br>
+(1) Capture video (series of input images) from live camera or pre-saved video.<br>
+(2) Load Yolo model<br>
 (3) In a infite loop, read all the input images, then mask the images (to get best results & save computation), 
     then feed all the masked images to the Yolo model.
-    
 (4) In each series of masked images, Yolo model will detect the objects (car, etc.), lets say it as results. 
     Each result (belongs to a detected object) contains bounding box informations - cordinates, class name, class confidence.
 (5) In the infite loop only, using cv2 & cvzone library, show/display the input un-masked images (video) along with the bounding box & other informations if needed.
