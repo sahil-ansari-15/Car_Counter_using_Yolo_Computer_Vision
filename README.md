@@ -1,6 +1,6 @@
 # Car_Counter_using_Yolo_Computer_Vision
  
-## Steps:<br><br>
+### Steps:
 (1) Capture video (series of input images) from live camera or pre-saved video.<br>
 (2) Load Yolo model<br>
 (3) In a infite loop, read all the input images, then mask the images (to get best results & save computation), 
@@ -12,7 +12,7 @@
 (7) Counting: A car (or object) will be counted (object ID added in the list) only when it's centre point crosses (specific +- range) the predefined line. To avoid duplicate counting, check that a object id should not be added already in the counting list.
 
 
-### Key Notes:<br><br>
+### Key Notes:
 (1) Tracking:<br>
     We have to track the object. i.e., should know where the car has gone from frame 1 to frame 2.<br>
     For this, we need a tracking ID. If a car is ID1 in frame 1, then it should remain ID1 in frame 2 as well (not any other ID).<br>
