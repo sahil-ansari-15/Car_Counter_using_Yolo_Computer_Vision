@@ -12,11 +12,11 @@
 (7) Counting: A car (or object) will be counted (object ID added in the list) only when it's centre point crosses (specific +- range) the predefined line. To avoid duplicate counting, check that a object id should not be added already in the counting list.
 
 
-## Key Notes:<br><br>
+### Key Notes:<br><br>
 (1) Tracking:<br>
     We have to track the object. i.e., should know where the car has gone from frame 1 to frame 2.<br>
     For this, we need a tracking ID. If a car is ID1 in frame 1, then it should remain ID1 in frame 2 as well (not any other ID).<br>
     To achieve this, we need a tracker called "sort.py" (available on GitHub: https://github.com/abewley/sort).
 
-(2) Counting:<br><br>
+(2) Counting:<br>
     A car (or object) will be counted only when it crosses the predefined line.
