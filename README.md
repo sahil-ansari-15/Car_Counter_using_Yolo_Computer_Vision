@@ -19,3 +19,5 @@
     To achieve this, we need a tracker called "sort.py" (available on GitHub: https://github.com/abewley/sort).<br>
 (2) Counting:<br>
     A car (or object) will be counted only when it crosses the predefined line.
+
+#### Reference: https://youtu.be/WgPbbWmnXJ8
